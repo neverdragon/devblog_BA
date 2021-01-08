@@ -13,8 +13,14 @@ Here is a very short recap:
 Currently I'm focussing on understanding the render transformation in Cycles to be able to calculate pixel-space bounding boxes for objects that we can then use to determine with areas to render, and (for now) setting the render region border accordingly.
 
 So far I have found that the Cycles camera class has the following potentially relevant matrices saved:
+
   ProjectionTransform worldtoraster;
+  
   ProjectionTransform worldtoscreen;
+  
   ProjectionTransform worldtondc;
+  
   Transform worldtocamera;
+  
+ I'm still trying to understand how they are applied; it seems straight forward, but the results I'm getting are not as expected. According to what I've read worldtoraster *should* be the right one to use.
   
